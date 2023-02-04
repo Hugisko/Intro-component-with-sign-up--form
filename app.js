@@ -2,8 +2,8 @@ const submit = document.querySelector(".submit");
 const inputs = document.querySelectorAll("input");
 const pattern = /^[A-Za-z0-9._+-]+[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]{2,}$/;
 
-submit.addEventListener("click", (e) => {
-    e.preventDefault();
+submit.addEventListener("click", () => {
+    
     inputs.forEach(input => {
         if(input.value === "" || (input.name === "email" && !pattern.test(input.value))){
             input.style.border = "2px solid hsl(0, 100%, 74%)";
